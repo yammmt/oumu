@@ -1,0 +1,14 @@
+#!/bin/sh
+TMP=/tmp/jsay.wav
+echo "$1" | open_jtalk \
+-m /usr/share/hts-voice/mei/mei_happy.htsvoice \
+-s 48000 \
+-p 320 \
+-a 0.58 \
+-u -0.5 \
+-jm 0.7 \
+-jf 0.5 \
+-x /var/lib/mecab/dic/open-jtalk/naist-jdic \
+-ow $TMP && \
+aplay --quiet $TMP
+rm -f $TMP
