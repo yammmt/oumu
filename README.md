@@ -19,6 +19,13 @@ $ sudo cp -R MMDAgent_Example-1.6/Voice/* /usr/share/hts-voice/mei/
 ```
 mei の声の置き場所に注意してください.  
 
+
+本レポジトリのルートで
+
+```bash
+$ chmod +x jsay
+```
+
 ### 実行
 ターミナルを二つ起動し, 片方で  
 
