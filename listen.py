@@ -11,7 +11,7 @@ __julius_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 def julius_begin():
     cmd = 'julius -C dictation-kit-v4.3.1-linux/main.jconf -C dictation-kit-v4.3.1-linux/am-gmm.jconf -demo -module'
-    subprocess.call(cmd, shell=True)
+    subprocess.Popen(cmd, shell=True)
 
 def connect_to_julius():
     julius_host = 'localhost'

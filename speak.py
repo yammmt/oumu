@@ -5,5 +5,5 @@ import subprocess
             
 def speak_with_jsay(sentence):
     cmd = './jsay' + ' ' + sentence
-    subprocess.call(cmd, shell=True)
+    subprocess.Popen(cmd, shell=True)
 
