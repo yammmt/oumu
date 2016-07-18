@@ -5,10 +5,10 @@ from time import sleep
 import listen
 import speak
 
-print("Please talk to me!")
-
 listen.julius_begin()
-sleep(5) # waits for start-up of julius
+sleep(10) # waits for start-up of julius
+print
+print("Please talk to me!")
 speak.speak_with_jsay("おはようございます")
 listen.connect_to_julius()
 
@@ -17,5 +17,7 @@ while(True):
     print(words_talked_to)
     speak.speak_with_jsay(words_talked_to)
     if "さよなら" in words_talked_to or "さようなら" in words_talked_to:
+        listen.disconnect_to_julius()
+        sleep(5)
         exit()
 
